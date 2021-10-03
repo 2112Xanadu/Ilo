@@ -21,7 +21,7 @@ public class MainActivity extends AppCompatActivity {
         btnStart = findViewById(R.id.btnStart);
         btnStart.setOnClickListener(new View.OnClickListener() {
             @Override
-            public void onClick(View view) {
+            public void onClick(View v) {
                 Log.v("onClick", "button clicked");
                 EditText editTxtName = (EditText) findViewById(R.id.editTxtName);
                 String name = editTxtName.getText().toString();
