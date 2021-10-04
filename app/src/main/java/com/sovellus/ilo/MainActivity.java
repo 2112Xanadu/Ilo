@@ -30,6 +30,7 @@ public class MainActivity extends AppCompatActivity {
                     //Intent intent = new Intent(this, HomeActivity.class);
                     //intent.putExtra(EXTRA_TEXT, name);
                     //startActivity(intent);
+                    //haloo :)
                 } else {
                     Toast.makeText(getApplicationContext(), "Tarvitaan nimi", Toast.LENGTH_SHORT).show();
                 }
