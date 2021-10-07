@@ -8,9 +8,12 @@ import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.TextView;
 import android.widget.Toast;
 
 public class MainActivity extends AppCompatActivity {
+    public static final String EXTRA_TEXT = "com.example.testi.EXTRA_TEXT";
+    TextView tvAloitusHeader;
     Button btnStart;
 
     @Override
@@ -27,10 +30,9 @@ public class MainActivity extends AppCompatActivity {
                 String name = editTxtName.getText().toString();
 
                 if (!name.isEmpty()) {
-                    //Intent intent = new Intent(this, HomeActivity.class);
-                    //intent.putExtra(EXTRA_TEXT, name);
-                    //startActivity(intent);
-                    //haloo :)
+                    Intent intent = new Intent(v.getContext(), HomeActivity.class);
+                    intent.putExtra(EXTRA_TEXT, name);
+                    startActivity(intent);
                 } else {
                     Toast.makeText(getApplicationContext(), "Tarvitaan nimi", Toast.LENGTH_SHORT).show();
                 }
