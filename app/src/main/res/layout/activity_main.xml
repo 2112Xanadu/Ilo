@@ -42,7 +42,7 @@
         android:layout_marginTop="10dp"
         android:padding="10dp"
         android:ems="10"
-        android:hint="Nimi"
+        android:hint="@string/namefield"
         android:inputType="textPersonName"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="@+id/tvAloitusHeader"

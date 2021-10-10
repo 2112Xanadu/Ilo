@@ -3,4 +3,10 @@
     <string name="iloa_taskustasi">Iloa taskustasi!</string>
     <string name="aloita">Aloita</string>
     <string name="positivequotes">Positive Quotes</string>
+    <string name="namefield">Nimi</string>
+    <string name="hengitysharjoitus">Hengitysharjoitus</string>
+    <string name="kiitollisuuslista">Kiitollisuuslista</string>
+    <string name="hengitysharjoitusHeader">Hengitysharjoitus</string>
+    <string name="hInstruction">Ota mukava asento. Hengitä syvään ja pidätä hetki. Kun vapautat hengityksen, keskity puhaltamaan huolesi kauas pois.\nJatka näin muutama minuutti ja tunne, kuinka stressi helpottaa.</string>
+    <string name="breathe">Hengitä sisään</string>
 </resources>
