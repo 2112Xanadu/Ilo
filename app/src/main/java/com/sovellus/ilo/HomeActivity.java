@@ -45,6 +45,6 @@ public class HomeActivity extends AppCompatActivity {
 
     /** Going from HomeActivity to GratitudeActivity */
     public void onClickStartGratitude(View v) {
-        //startActivity(new Intent(this, GratitudeActivity.class));
+        startActivity(new Intent(this, GratitudeActivity.class));
     }
 }

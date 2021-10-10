@@ -42,7 +42,7 @@ public class GratitudeActivity extends AppCompatActivity {
         super.onOptionsItemSelected(item);
 
         switch (item.getItemId()) {
-            case R.id.add: /** If Lisaa was selected */
+            case R.id.add_item: /** If Lisaa was selected */
                 // Going from MainActivity to EditorActivity
                 startActivity(new Intent(getApplicationContext(), EditorActivity.class));
                 return true;
