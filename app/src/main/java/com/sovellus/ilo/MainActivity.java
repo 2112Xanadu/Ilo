@@ -11,6 +11,7 @@ import android.widget.EditText;
 import android.widget.Toast;
 
 public class MainActivity extends AppCompatActivity {
+    public static final String EXTRA_TEXT = "com.sovellus.ilo.EXTRA_TEXT";
     Button btnStart;
 
     @Override
@@ -27,10 +28,9 @@ public class MainActivity extends AppCompatActivity {
                 String name = editTxtName.getText().toString();
 
                 if (!name.isEmpty()) {
-                    //Intent intent = new Intent(this, HomeActivity.class);
-                    //intent.putExtra(EXTRA_TEXT, name);
-                    //startActivity(intent);
-                    //haloo :)
+                    Intent intent = new Intent(MainActivity.this, HomeActivity.class);
+                    intent.putExtra(EXTRA_TEXT, name);
+                    startActivity(intent);
                 } else {
                     Toast.makeText(getApplicationContext(), "Tarvitaan nimi", Toast.LENGTH_SHORT).show();
                 }

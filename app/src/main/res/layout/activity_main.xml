@@ -11,8 +11,8 @@
         android:id="@+id/logo"
         android:layout_width="380dp"
         android:layout_height="390dp"
-        android:src="@drawable/logo"
         android:scaleType="centerCrop"
+        android:src="@drawable/logo"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
@@ -22,49 +22,50 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="8dp"
-        android:layout_marginTop="16dp"
+        android:layout_marginTop="10dp"
         android:layout_marginEnd="8dp"
+        android:lineSpacingExtra="8dp"
         android:text="@string/iloa_taskustasi"
-        android:textSize="24sp"
+        android:textColor="#575757"
+        android:textSize="25sp"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/logo"
         app:layout_constraintHorizontal_bias="0.497"
-        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/logo"
         app:layout_constraintTop_toBottomOf="@+id/logo"
-        app:layout_constraintVertical_bias="0.003" />
+        app:layout_constraintVertical_bias="0.0" />
 
     <EditText
         android:id="@+id/editTxtName"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="24dp"
+        android:layout_marginTop="10dp"
+        android:padding="10dp"
         android:ems="10"
         android:hint="Nimi"
         android:inputType="textPersonName"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/tvAloitusHeader"
         app:layout_constraintHorizontal_bias="0.497"
-        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/tvAloitusHeader"
         app:layout_constraintTop_toBottomOf="@+id/tvAloitusHeader"
-        app:layout_constraintVertical_bias="0.035" />
+        app:layout_constraintVertical_bias="0.077" />
 
     <Button
         android:id="@+id/btnStart"
         android:layout_width="167dp"
         android:layout_height="49dp"
-        android:layout_marginTop="49dp"
-        android:layout_marginBottom="104dp"
+        android:layout_marginTop="30dp"
+        android:layout_marginBottom="74dp"
         android:background="@drawable/bgbtn"
         android:text="@string/aloita"
         android:textAllCaps="false"
         android:textColor="@color/white"
         android:textSize="20sp"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.495"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/editTxtName" />
-
-
+        app:layout_constraintEnd_toEndOf="@+id/editTxtName"
+        app:layout_constraintStart_toStartOf="@+id/editTxtName"
+        app:layout_constraintTop_toBottomOf="@+id/editTxtName"
+        app:layout_constraintVertical_bias="0.0" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
