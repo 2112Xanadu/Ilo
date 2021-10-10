@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:background="@color/white"
+    android:padding="10dp"
+    tools:context=".GratitudeActivity">
+
+    <TextView
+        android:id="@+id/Heading"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:padding="10dp"
+        android:text="@string/kiitollisuuslistaHeader"
+        android:textColor="@color/black"
+        android:textSize="28dp" />
+
+    <TextView
+        android:id="@+id/instruction"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/Heading"
+        android:lineSpacingExtra="4dp"
+        android:padding="10dp"
+        android:text="@string/gInstruction"
+        android:textColor="@color/black"
+        android:textSize="19dp" />
+
+    <!--Kiitollisuuslista -->
+    <ListView
+        android:id="@+id/listView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/instruction" />
+
+    <!--Add Button -->
+    <Button
+        android:id="@+id/addBtn"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:background="@drawable/bgbtn"
+        android:textSize="20sp"
+        android:text="@string/add_button"
+        android:textAllCaps="false"
+        android:textColor="@color/white"
+        android:textStyle="bold" />
+
+</RelativeLayout>
