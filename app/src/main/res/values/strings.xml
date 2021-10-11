@@ -10,6 +10,6 @@
     <string name="hInstruction">Ota mukava asento. Hengitä syvään ja pidätä hetki. Kun vapautat hengityksen, keskity puhaltamaan huolesi kauas pois.\nJatka näin muutama minuutti ja tunne, kuinka stressi helpottaa.</string>
     <string name="breathe">Hengitä sisään</string>
     <string name="kiitollisuuslistaHeader">Kiitollisuuslista</string>
-    <string name="gInstruction">Etsi rauhassa paikka ja aika, halutessasi ota viereen kupponen teetä ja villasukat.\nEi ole väliä, onko listaamasi asia iso tai pieni, kunhan se on positiivinen.</string>
+    <string name="gInstruction">Etsi rauhaisa paikka ja aika, halutessasi ota viereen kupponen teetä ja villasukat.\nEi ole väliä, onko listaamasi asia iso tai pieni, kunhan se on positiivinen.</string>
     <string name="add_button">Lisää</string>
 </resources>
