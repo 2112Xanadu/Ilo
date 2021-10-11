@@ -96,7 +96,7 @@ public class GratitudeActivity extends AppCompatActivity {
                 intent.putExtra("itemId", i);
                 startActivity(intent);
 
-                Toast.makeText(getApplicationContext(), "Clicked: " + i, Toast.LENGTH_LONG).show();
+                //Toast.makeText(getApplicationContext(), "Clicked: " + i, Toast.LENGTH_LONG).show();
             }
         });
 
