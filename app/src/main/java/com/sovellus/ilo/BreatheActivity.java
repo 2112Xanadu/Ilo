@@ -15,6 +15,11 @@ public class BreatheActivity extends AppCompatActivity {
     View outerCircleView, innerCircleView;
     private int holdDuration = 0;
 
+    /**
+     * Initializes the activity.
+     *
+     * @param savedInstanceState The current state data
+     */
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);

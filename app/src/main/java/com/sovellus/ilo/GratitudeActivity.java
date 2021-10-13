@@ -37,21 +37,30 @@ public class GratitudeActivity extends AppCompatActivity {
         return super.onCreateOptionsMenu(menu);
     }
 
+    /**
+     * Handle the Options for the Menu button. Adds item to list and Removes the list
+     * of the main EditText, creates an intent, and launches the
+     * EditorActivity.
+     *
+     * @param item The item Options that was clicked.
+     */
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
         super.onOptionsItemSelected(item);
-
+        // Handle item selection
         switch (item.getItemId()) {
-            case R.id.add_item: /** If Lisaa was selected */
+            case R.id.add_item:
                 // Going from MainActivity to EditorActivity
+                // Lisaa was selected; add item to list
                 startActivity(new Intent(getApplicationContext(), EditorActivity.class));
                 return true;
-            case R.id.delete_all: /** If Poista kaikki was selected */
-                // To delete the data from the App
+            case R.id.delete_all:
+                // Poista kaikki was selected; deletes the data from the App
                 dialog = new AlertDialog.Builder(GratitudeActivity.this)
                         .setIcon(android.R.drawable.ic_dialog_alert)
                         .setTitle("Huomio")
                         .setMessage("Oletko varma, että haluat poistaa kaiken listalta?")
+                        // if "Kyllä" button is clicked, remove everything from the list
                         .setPositiveButton("Kyllä", new DialogInterface.OnClickListener() {
                             @Override
                             public void onClick(DialogInterface dialogInterface, int i) {
@@ -62,35 +71,37 @@ public class GratitudeActivity extends AppCompatActivity {
                                 sharedPreferences.edit().putStringSet("notes", set).apply();
                                 Toast.makeText(GratitudeActivity.this, "Poistaminen onnistui", Toast.LENGTH_SHORT).show();
                             }
+                            // if "En" button is clicked, just close the dialog box and do nothing
                         }).setNegativeButton("En", null).show();
                 return true;
         }
         return (super.onOptionsItemSelected(item));
     }
 
+    /**
+     * Initializes the activity.
+     *
+     * @param savedInstanceState The current state data
+     */
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_gratitude);
 
         getSupportActionBar().setDisplayShowTitleEnabled(false);
+        /* initialize all the view variables, handle listview and assign adapter */
         ListView listView = findViewById(R.id.listView);
         arrayAdapter = new ArrayAdapter<String>(GratitudeActivity.this, android.R.layout.simple_list_item_1, gratitudeList);
         listView.setAdapter(arrayAdapter);
 
         sharedPreferences = getApplicationContext().getSharedPreferences("listdata", Activity.MODE_PRIVATE);
         HashSet<String> set = (HashSet<String>) sharedPreferences.getStringSet("gratitudeList", null);
-        //if (set == null) {
-        //notes.add("Olen kiitollinen ");
-        //} else {
-        //notes = new ArrayList(set);
-        //}
 
-        /** When the user taps one item on the list */
-        /** Going from GratitudeActivity to EditorActivity */
+        /** When the user taps one item on the list; launches the EditorActivity.*/
         listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
+                // Log the start of the onItemClick() method.
                 Log.d("onItemClick", "(" + i + ")");
                 Intent intent = new Intent(getApplicationContext(), EditorActivity.class);
                 intent.putExtra("itemId", i);
@@ -100,6 +111,8 @@ public class GratitudeActivity extends AppCompatActivity {
             }
         });
 
+        /**
+         * Handles the onItemLongClick.
         /** When the user long clicks one item on the list */
         /** Alert */
         listView.setOnItemLongClickListener(new AdapterView.OnItemLongClickListener() {
@@ -111,6 +124,7 @@ public class GratitudeActivity extends AppCompatActivity {
                         .setIcon(android.R.drawable.ic_dialog_alert)
                         .setTitle("Huomio")
                         .setMessage("Oletko varma, että haluat poistaa tämän listalta?")
+                        // if "Kyllä" button is clicked, remove the item from the list
                         .setPositiveButton("Kyllä", new DialogInterface.OnClickListener() {
                             @Override
                             public void onClick(DialogInterface dialogInterface, int i) {
@@ -121,6 +135,7 @@ public class GratitudeActivity extends AppCompatActivity {
                                 sharedPreferences.edit().putStringSet("gratitudeList", set).apply();
                                 Toast.makeText(GratitudeActivity.this, "Poistaminen onnistui", Toast.LENGTH_SHORT).show();
                             }
+                            // if "En" button is clicked, just close the dialog box and do nothing
                         }).setNegativeButton("En", null).show();
                 return true;
             }
@@ -128,6 +143,12 @@ public class GratitudeActivity extends AppCompatActivity {
 
         Button addBtn = findViewById(R.id.addBtn);
         // When the user taps the Lisaa button
+        /**
+         * Handles the onClick for the "Lisää" button. Adds an item to the list
+         * creates an intent, and launches the EditorActivity with that intent.
+         *
+         * @param view The view (Button) that was clicked.
+         */
         addBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
