@@ -14,6 +14,13 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import java.util.HashSet;
 
+/**
+ * Activity for loading layout resources
+ *
+ * @author Xanadu2112
+ * @version 2010.1105
+ * @since 1.0
+ */
 public class EditorActivity extends AppCompatActivity {
     EditText editText;
     TextView timeoutput;

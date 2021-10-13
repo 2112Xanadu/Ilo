@@ -22,6 +22,13 @@ import androidx.appcompat.app.AppCompatActivity;
 import java.util.ArrayList;
 import java.util.HashSet;
 
+/**
+ * Activity for loading layout resources
+ *
+ * @author Xanadu2112
+ * @version 2010.1105
+ * @since 1.0
+ */
 public class GratitudeActivity extends AppCompatActivity {
     static ArrayList<String> gratitudeList = new ArrayList<String>();
     static ArrayAdapter arrayAdapter;

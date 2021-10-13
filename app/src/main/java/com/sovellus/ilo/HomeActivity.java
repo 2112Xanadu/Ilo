@@ -15,7 +15,7 @@ import java.util.Random;
 /**
  * Activity for loading layout resources
  *
- * @author Grete
+ * @author Lea
  * @version 2010.1105
  * @since 1.0
  */

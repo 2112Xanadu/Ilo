@@ -18,7 +18,7 @@ public class MainActivity extends AppCompatActivity {
      * Activity for loading layout resources
      *
      *
-     * @author Xanadu2112
+     * @author Nage-BabySeal
      * @version 2010.1105
      * @since 1.0
      */

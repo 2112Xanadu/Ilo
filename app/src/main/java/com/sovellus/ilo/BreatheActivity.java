@@ -8,6 +8,13 @@ import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+/**
+ * Activity for loading layout resources
+ *
+ * @author Xanadu2112
+ * @version 2010.1105
+ * @since 1.0
+ */
 public class BreatheActivity extends AppCompatActivity {
     private TextView statusText;
     CountDownTimer countDownTimer;
